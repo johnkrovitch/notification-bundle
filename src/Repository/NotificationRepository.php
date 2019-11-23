@@ -5,15 +5,10 @@ namespace JK\NotificationBundle\Repository;
 use JK\NotificationBundle\Entity\Notification;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use JK\Repository\AbstractRepository;
 
 class NotificationRepository extends AbstractRepository
 {
-    public function save(Notification $notification): void
-    {
-        $this->_em->persist($notification);
-        $this->_em->flush();
-    }
-
     public function findUnread(string $ownerId = null): Collection
     {
         $queryBuilder = $this
