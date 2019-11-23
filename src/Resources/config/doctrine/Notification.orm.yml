@@ -18,7 +18,10 @@ JK\NotificationBundle\Entity\Notification:
             type: boolean
             column: is_read
         ownerId:
-            type: integer
+            type: string
+            nullable: true
+        ownerReference:
+            type: string
             nullable: true
         createdAt:
             type: datetime

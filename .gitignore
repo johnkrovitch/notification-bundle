@@ -1,6 +1,7 @@
 /bin/
 composer.lock
 symfony.lock
+.php_cs.cache
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -10,3 +11,8 @@ symfony.lock
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

@@ -12,13 +12,17 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.2",
-        "doctrine/doctrine-bundle": "^2.0",
+        "doctrine/doctrine-bundle": "^1.0 || ^2.0",
         "doctrine/orm": "^2.0",
         "stof/doctrine-extensions-bundle": "^1.3",
         "symfony/config": "^3.0 || ^4.0",
-        "symfony/dependency-injection": "^3.4.26 || ^4.1.12"
+        "symfony/dependency-injection": "^3.4.26 || ^4.1.12",
+        "symfony/property-access": "^3.0 || ^4.0"
     },
     "require-dev": {
+        "phpstan/phpstan-shim": "^0.11.19",
+        "phpunit/phpunit": "^8.4",
+        "sensiolabs/security-checker": "^4.0 || ^5.0 || ^6.0",
         "symfony/flex": "^1.4"
     },
     "autoload": {
@@ -39,7 +43,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
         }
     }
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="NotificationBundle Test Suite">
+            <directory>tests/NotificationBundle</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <server name="KERNEL_DIR"
+                value="src/JK/NotificationBundle/Tests/Fixtures/app" />
+    </php>
+
+    <filter>
+        <whitelist>
+            <directory>src/</directory>
+            <exclude>
+                <directory>Resources</directory>
+                <directory>Debug</directory>
+                <directory>Tests</directory>
+                <directory>vendor</directory>
+                <directory>DataFixtures</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html"
+             target="var/phpunit/coverage"
+             title="NotificationBundle"
+             charset="utf8"
+             yui="true"
+             highlight="true"
+             lowUpperBound="35"
+             highLowerBound="70"/>
+        <log type="coverage-clover"
+             target="var/phpunit/logs/clover.xml"/>
+        <log type="junit"
+             target="var/phpunit/logs/junit.xml"
+             logIncompleteSkipped="false"/>
+    </logging>
+</phpunit>

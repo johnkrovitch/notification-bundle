@@ -27,7 +27,6 @@ class JKNotificationExtension extends Extension
         $definition->setArgument(0, $config);
     }
 
-
     public function getAlias()
     {
         return 'jk_notification';

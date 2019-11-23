@@ -24,9 +24,14 @@ class Notification
     protected $content;
 
     /**
-     * @var integer
+     * @var string
      */
     protected $ownerId;
+
+    /**
+     * @var string
+     */
+    protected $ownerReference;
 
     /**
      * @var bool
@@ -98,17 +103,17 @@ class Notification
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getOwnerId(): int
+    public function getOwnerId(): string
     {
         return $this->ownerId;
     }
 
     /**
-     * @param int $ownerId
+     * @param string $ownerId
      */
-    public function setOwnerId(int $ownerId): void
+    public function setOwnerId(string $ownerId): void
     {
         $this->ownerId = $ownerId;
     }
@@ -116,5 +121,21 @@ class Notification
     public function hasOwnerId(): bool
     {
         return null !== $this->ownerId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwnerReference(): string
+    {
+        return $this->ownerReference;
+    }
+
+    /**
+     * @param string $ownerReference
+     */
+    public function setOwnerReference(string $ownerReference): void
+    {
+        $this->ownerReference = $ownerReference;
     }
 }
