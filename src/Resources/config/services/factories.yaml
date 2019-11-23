@@ -1,0 +1,4 @@
+services:
+    JK\NotificationBundle\Factory\NotificationFactory: ~
+
+    JK\NotificationBundle\Factory\NotificationFactoryInterface: '@JK\NotificationBundle\Factory\NotificationFactory'

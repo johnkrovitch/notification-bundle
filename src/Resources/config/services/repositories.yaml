@@ -1,0 +1,4 @@
+services:
+    JK\NotificationBundle\Repository\NotificationRepository:
+        arguments:
+            - '@doctrine'

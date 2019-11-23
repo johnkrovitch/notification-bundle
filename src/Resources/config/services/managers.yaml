@@ -1,0 +1,8 @@
+services:
+    JK\NotificationBundle\Manager\NotificationManager:
+        arguments:
+            $repository: '@JK\NotificationBundle\Repository\NotificationRepository'
+            $factory: '@JK\NotificationBundle\Factory\NotificationFactoryInterface'
+
+
+    JK\NotificationBundle\Manager\NotificationManagerInterface: '@JK\NotificationBundle\Manager\NotificationManager'

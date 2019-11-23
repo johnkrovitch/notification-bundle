@@ -1,0 +1,6 @@
+services:
+    JK\NotificationBundle\Event\Subscriber\NotificationSubscriber:
+        arguments:
+            $manager: '@JK\NotificationBundle\Manager\NotificationManager'
+        tags:
+            - {name: kernel.event_subscriber}

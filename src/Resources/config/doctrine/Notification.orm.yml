@@ -1,0 +1,32 @@
+JK\NotificationBundle\Entity\Notification:
+    type: entity
+    table: cms_notification
+    repositoryClass: JK\NotificationBundle\Repository\NotificationRepository
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: auto
+
+    fields:
+        title:
+            type: string
+        content:
+            type: text
+        read:
+            type: boolean
+            column: is_read
+        ownerId:
+            type: integer
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
