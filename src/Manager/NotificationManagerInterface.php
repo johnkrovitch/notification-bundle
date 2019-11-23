@@ -2,7 +2,6 @@
 
 namespace JK\NotificationBundle\Manager;
 
-
 use JK\NotificationBundle\Entity\Notification;
 
 interface NotificationManagerInterface
