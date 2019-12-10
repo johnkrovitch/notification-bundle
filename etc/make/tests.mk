@@ -1,26 +1,26 @@
-.PHONY: tests php-cs-fixer@fix phpstan@analyse phpunit@run security@check
+.PHONY: tests php-cs-fixer.fix phpstan.analyse phpunit.run security.check
 
 ### PHPUnit ###
-tests: phpunit@run php-cs-fixer@fix phpstan@analyse security@check
+tests: phpunit.run php-cs-fixer.fix phpstan.analyse security.check
 
-phpunit@run:
+phpunit.run:
 	bin/phpunit
-	@echo "Results file generated file://$(current_dir)/var/phpunit/coverage/index.html"
+	@echo "Results file generated file://$(shell pwd)/var/phpunit/coverage/index.html"
 
 ### CodeStyle ###
-php-cs-fixer@fix:
+php-cs-fixer.fix:
 	php-cs-fixer fix
 
-php-cs-fixer@install:
-	@echo "Install binary using composer (globally)"
+php-cs-fixer.install:
+	.echo "Install binary using composer (globally)"
 	composer global require friendsofphp/php-cs-fixer
-	@echo "Exporting composer binary path"
-	@export PATH="$PATH:$HOME/.composer/vendor/bin"
+	.echo "Exporting composer binary path"
+	.export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-phpstan@analyse:
-	bin/phpstan analyse --level=1 src
+phpstan.analyse:
+	bin/phpstan analyse --level=5 src
 	bin/phpstan analyse --level=1 tests
 ##################
 
-security@check:
+security.check:
 	bin/security-checker security:check
