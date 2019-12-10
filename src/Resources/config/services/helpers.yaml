@@ -1,2 +1,4 @@
 services:
-    JK\NotificationBundle\DependencyInjection\Helper\ConfigurationHelper: ~
+    JK\NotificationBundle\DependencyInjection\Helper\ConfigurationHelper:
+        arguments:
+            $config: '%jk_notification.config%'

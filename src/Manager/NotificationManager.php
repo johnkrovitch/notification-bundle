@@ -36,7 +36,7 @@ class NotificationManager implements NotificationManagerInterface
         return $notification;
     }
 
-    public function create(string $title, string $content, int $ownerId = null): Notification
+    public function create(string $title, string $content, string $ownerId = null): Notification
     {
         $notification = $this->factory->create($title, $content, $ownerId);
         $this->save($notification);

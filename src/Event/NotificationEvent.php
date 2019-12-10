@@ -17,37 +17,28 @@ class NotificationEvent extends Event
     private $content;
 
     /**
-     * @var int
+     * @var string
      */
     private $ownerId;
 
-    public function __construct(string $title, string $content, int $ownerId = null)
+    public function __construct(string $title, string $content, string $ownerId = null)
     {
         $this->title = $title;
         $this->content = $content;
         $this->ownerId = $ownerId;
     }
 
-    /**
-     * @return string
-     */
     public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @return string
-     */
     public function getContent(): string
     {
         return $this->content;
     }
 
-    /**
-     * @return int
-     */
-    public function getOwnerId(): int
+    public function getOwnerId(): string
     {
         return $this->ownerId;
     }
