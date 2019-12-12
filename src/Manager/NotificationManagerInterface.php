@@ -8,7 +8,7 @@ interface NotificationManagerInterface
 {
     public function get(int $id): Notification;
 
-    public function create(string $title, string $content, int $ownerId = null): Notification;
+    public function create(string $title, string $content, string $ownerId = null): Notification;
 
     public function markAsRead(Notification $notification): void;
 

@@ -1,0 +1,43 @@
+framework:
+    secret: secret
+    test: ~
+    router:
+        resource: '%kernel.root_dir%/routing.yml'
+    form: false
+    csrf_protection: false
+    validation: false
+    session:
+        storage_id: session.storage.filesystem
+
+
+twig: ~
+
+doctrine:
+    dbal:
+        # configure these for your database server
+        driver: 'pdo_mysql'
+        server_version: '5.7'
+        charset: utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+
+        url: url
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            App:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App
+
+services:
+    serializer:
+        synthetic: true
+
+    translator.logging.inner:
+        synthetic: true

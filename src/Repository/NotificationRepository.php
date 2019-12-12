@@ -2,9 +2,9 @@
 
 namespace JK\NotificationBundle\Repository;
 
-use JK\NotificationBundle\Entity\Notification;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use JK\NotificationBundle\Entity\Notification;
 use JK\Repository\AbstractRepository;
 
 class NotificationRepository extends AbstractRepository

@@ -2,7 +2,6 @@
 
 namespace JK\NotificationBundle\DependencyInjection;
 
-use JK\NotificationBundle\DependencyInjection\Helper\ConfigurationHelper;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -19,12 +18,7 @@ class JKNotificationExtension extends Extension
 
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-
-        if (!$container->hasDefinition(ConfigurationHelper::class)) {
-            return;
-        }
-        $definition = $container->getDefinition(ConfigurationHelper::class);
-        $definition->setArgument(0, $config);
+        $container->setParameter('jk_notification.config', $config);
     }
 
     public function getAlias()
