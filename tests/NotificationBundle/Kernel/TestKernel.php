@@ -6,7 +6,6 @@ use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use JK\NotificationBundle\JKNotificationBundle;
 use JK\NotificationBundle\Tests\DependencyInjection\PublicServicePass;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
@@ -24,7 +23,6 @@ class TestKernel extends Kernel
             // Dependencies
             new FrameworkBundle(),
             new DoctrineBundle(),
-            new TwigBundle(),
             // My Bundle to test
             new JKNotificationBundle(),
         ];
