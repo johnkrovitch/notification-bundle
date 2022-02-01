@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.2",
-        "johnkrovitch/orm-pack": "^1.0|^2.0",
+        "johnkrovitch/orm-pack": "^3.2",
         "symfony/config": "^4.0|^5.1",
         "symfony/property-access": "^4.0|^5.1",
         "symfony/translation": "^4.0|^5.1",
