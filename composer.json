@@ -20,7 +20,7 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
-        "phpstan/phpstan-symfony": "^0.12",
+        "phpstan/phpstan-symfony": "^1.4",
         "phpunit/phpunit": "^8.4",
         "sensiolabs/security-checker": "^4.0|^5.0|^6.0"
     },
